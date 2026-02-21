@@ -1,0 +1,23 @@
+To count no of bits use -> Integer.bitCount(i) ~ O(1)
+When working with bits always remeber maximum bits are 32
+
+Number of digits in Decimal Num = Log10 Num -> digits10​(n)=⌊log10​(n)⌋+1
+Number of digits in Binary Num  = Log2 Num  -> bits(n)=⌊log2​(n)⌋+1
+
+Sieve Of Erastothenes -> O(N Log Log N)
+
+//This can be made static so that we dont always need to compute isPrime because bits are always less 33
+static boolean[] prime = new boolean[33];
+
+static {
+    Arrays.fill(prime, true);
+    prime[0] = false;
+    prime[1] = false;
+    for(int i = 2; i * i < 33; i++){
+        if(prime[i]){
+            for(int j = i * i; j < 33; j += i){
+                prime[j] = false;
+            }
+        }
+    }
+}
