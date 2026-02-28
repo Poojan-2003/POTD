@@ -1,0 +1,17 @@
+Number of binary digits in num = Log2(Num)+1 
+Number of Decimal digits in num = Log(Num)+1
+
+Java - Log base 2 = Log(Num)/Log(2)
+
+To check if num is power of 2 : (num & (num-1)) == 0 ? True : False
+
+In binary new digit is added when it is power of 2
+
+For eg
+     num = 2 - 10
+     num = 3 - 11
+     num = 4 - 100 -> No of Digits increased
+     num = 5 - 101
+     num = 6 - 110
+     num = 7 - 111
+     num = 8 - 1000 -> -> No of Digits increased
